@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+body {
+  font-family: Inter, Helvetica, sans-serif;
+  color: white;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl font-semibold tracking-normal;
+  }
+
+  h2 {
+    @apply text-xl font-medium tracking-tight;
+  }
+
+  h3 {
+    @apply text-base;
+  }
+
+  p {
+    @apply mb-4 text-sm;
+  }
+
+  li {
+    @apply mt-0 text-xs;
+  }
+}
+
+@theme {
+  --color-brand-green: #3bffd9;
+  --color-brand-bg: #1f2937;
+  --animate-blink-text: blink 2s steps(2, start) infinite;
+
+  @keyframes blink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+}
