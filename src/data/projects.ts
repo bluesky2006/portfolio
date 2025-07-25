@@ -4,7 +4,7 @@ export const projects = [
     description: "AI-powered app that reverse engineers recipes from food labels.",
     stack: ["React Native", "Expo", "Gemini API", ],
     link: [
-      { label: "GitHub Repo", url: "https://github.com/bluesky2006/reci-p.ai" },
+      { label: "GitHub", url: "https://github.com/bluesky2006/reci-p.ai" },
     ],
   },
   {
