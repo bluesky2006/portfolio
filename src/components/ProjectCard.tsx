@@ -9,9 +9,9 @@ function ProjectCard() {
         return (
           <div
             key={index}
-            className="border-brand-green border-l-4 px-5 py-1 text-white drop-shadow-sm transition delay-50 duration-300 hover:translate-x-2"
+            className="border-brand-main border-l-4 px-5 py-1 text-white drop-shadow-sm transition delay-50 duration-300 hover:translate-x-2"
           >
-            <h2 className="text-brand-green mt-0 mb-4">{title}</h2>
+            <h2 className="text-brand-main mt-0 mb-4">{title}</h2>
             <p className="whitespace-pre-line">{description}</p>
             <ul className="mb-4 flex flex-row flex-wrap gap-4">
               {stack.map((item, index) => (
@@ -22,7 +22,7 @@ function ProjectCard() {
               {link.map((item, index) => (
                 <li key={index} className="transition hover:scale-110">
                   <a href={item.url} target="_blank">
-                    <span className="text-brand-green">&gt;</span> {item.label}
+                    <span className="text-brand-main">&gt;</span> {item.label}
                   </a>
                 </li>
               ))}

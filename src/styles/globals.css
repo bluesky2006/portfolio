@@ -7,7 +7,7 @@ body {
 
 @layer base {
   h1 {
-    @apply text-5xl font-semibold tracking-normal;
+    @apply text-5xl font-semibold tracking-wide;
   }
 
   h2 {
@@ -28,8 +28,8 @@ body {
 }
 
 @theme {
-  --color-brand-green: #3bffd9;
-  --color-brand-bg: #1f2937;
+  --color-brand-main: #ffff00;
+  --color-brand-bg: #25292a;
   --animate-blink-text: blink 2s steps(2, start) infinite;
 
   @keyframes blink {
