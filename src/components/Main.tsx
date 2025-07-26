@@ -55,6 +55,12 @@ function Main() {
           occasional club night, or trying to coax a toddler into their shoes.
         </p>
       </div>
+      <h2 className="sticky top-0 bg-brand-bg z-10 py-5">
+        <span className="text-sm absolute transform -translate-x-4 translate-y-1 text-brand-main">
+          &gt;{" "}
+        </span>
+        projects <span className="animate-blink-text text-brand-main">_</span>
+      </h2>
       <ProjectCard />
       <ScrollIndicator />
     </main>
