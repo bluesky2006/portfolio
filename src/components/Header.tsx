@@ -1,4 +1,5 @@
 import Socials from "./Socials";
+import Footer from "./Footer";
 
 function Header() {
   return (
@@ -27,11 +28,13 @@ function Header() {
             <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
               clean, beautiful content
             </strong>
-            .
           </p>
         </div>
       </div>
-      <Socials />
+      <div className="flex flex-col gap-5">
+        <Footer />
+        <Socials />
+      </div>
     </header>
   );
 }
