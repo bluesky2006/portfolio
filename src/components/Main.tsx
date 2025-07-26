@@ -6,28 +6,53 @@ function Main() {
     <main className="flex w-[50%] flex-col gap-10 py-24">
       <div className="mt-2">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-          blandit quam vitae volutpat pellentesque. Phasellus ullamcorper
-          scelerisque magna, nec tincidunt urna vestibulum sed. Suspendisse
-          vitae dolor placerat, aliquam augue id, fermentum orci. Duis fringilla
-          nisl nec lorem pulvinar, ut maximus dolor aliquet. Sed nec lectus eu
-          justo blandit varius a at dui. Quisque nisl purus, fringilla at elit
-          at, bibendum commodo mauris. In hac habitasse platea dictumst. Mauris
-          lacinia aliquam nunc, sit amet fermentum mauris pretium a. Donec
-          congue ullamcorper facilisis.
+          For over a decade, I worked in publishing, crafting layouts, wrangling
+          type and obsessing over margins and grids. I loved the tactility of
+          design, the problem-solving in structure, the satisfaction of clarity.
+          But as the industry shifted and tools evolved, I found myself drawn
+          more and more to the how behind the screen – the logic, the
+          interactivity and the code.
         </p>
         <p>
-          Ut dictum odio sed lorem condimentum, sit amet bibendum ante maximus.
-          Duis viverra vehicula odio, nec volutpat arcu varius ut. Sed tempor
-          tortor a sem tempus bibendum et et lectus. Curabitur libero augue,
-          viverra rutrum est at, fringilla imperdiet nulla. Proin consectetur
-          varius purus, quis vehicula nibh faucibus quis. Duis blandit augue in
-          nibh mollis, eu cursus magna posuere. Sed tempus, elit eu auctor
-          sollicitudin, diam libero convallis tortor, id ullamcorper libero
-          turpis et leo. Nunc ac vestibulum est. Sed eu ante ullamcorper nulla
-          pellentesque venenatis et id nisi. Cras efficitur turpis ullamcorper
-          nulla lobortis venenatis. Cras efficitur purus ex, ac maximus dui
-          hendrerit id. Morbi cursus ex quis mauris placerat scelerisque.
+          What began as a few tentative tweaks to a website soon snowballed into
+          a full immersion in full-stack JavaScript development. I completed an
+          intensive bootcamp with{" "}
+          <a href="https://www.northcoders.com/" target="_blank">
+            <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
+              Northcoders
+            </strong>
+          </a>
+          , where I built projects using{" "}
+          <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
+            React
+          </strong>
+          ,{" "}
+          <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
+            Node.js
+          </strong>
+          ,{" "}
+          <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
+            PostgreSQL
+          </strong>{" "}
+          and{" "}
+          <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
+            MongoDB
+          </strong>{" "}
+          – with a dash of AI and mobile thrown in for good measure. Along the
+          way, I discovered that many of the instincts I’d honed in design –
+          clarity, usability, structure, communication – translate beautifully
+          to code.
+        </p>
+        <p>
+          Now I’m looking to combine the best of both worlds: visual thinking
+          and logical flow, aesthetic polish and functional design. Whether I’m
+          building an interface, debugging a server or just trying to get that
+          last media query to behave, I bring curiosity, craft and a drive to
+          make things that feel good to use.
+        </p>
+        <p>
+          Outside of work, you’ll find me digging for music, hosting the
+          occasional club night, or trying to coax a toddler into their shoes.
         </p>
       </div>
       <ProjectCard />
