@@ -3,7 +3,7 @@ import ScrollIndicator from "./ScrollIndicator";
 
 function Main() {
   return (
-    <main className="flex w-[50%] flex-col gap-10 py-24">
+    <main className="flex lg:w-[50%] md:w-[80%] flex-col gap-10 py-24 ml-8">
       <div className="mt-2">
         <p>
           For over a decade, I worked in publishing, crafting layouts, wrangling

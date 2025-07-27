@@ -3,9 +3,11 @@ import Main from "@/components/Main";
 
 export default function Home() {
   return (
-    <div className="flex justify-between gap-20">
-      <Header />
-      <Main />
+    <div>
+      <div className="flex lg:flex-row md:flex-col justify-between lg:gap-20">
+        <Header />
+        <Main />
+      </div>
     </div>
   );
 }

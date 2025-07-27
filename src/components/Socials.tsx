@@ -1,6 +1,6 @@
 function Socials() {
   return (
-    <ol className="flex flex-col gap-4">
+    <ol className="flex lg:flex-col md:flex-row md:ml-8 gap-4">
       <li>
         <a
           href="https://github.com/bluesky2006"
