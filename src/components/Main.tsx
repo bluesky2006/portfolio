@@ -3,7 +3,7 @@ import ScrollIndicator from "./ScrollIndicator";
 
 function Main() {
   return (
-    <main className="flex lg:w-[50%] md:w-[80%] flex-col gap-10 py-24 ml-8">
+    <main className="flex lg:w-[50%] md:w-[80%] flex-col gap-10 lg:py-24 ml-8">
       <div className="mt-2">
         <p>
           For over a decade, I worked in publishing, crafting layouts, wrangling
@@ -40,8 +40,8 @@ function Main() {
           </strong>{" "}
           – with a dash of AI and mobile thrown in for good measure. Along the
           way, I discovered that many of the instincts I’d honed in design –
-          clarity, usability, structure, communication – translate beautifully
-          to code.
+          clarity, usability, structure and communication – translate
+          beautifully to code.
         </p>
         <p>
           Now I’m looking to combine the best of both worlds: visual thinking
@@ -52,14 +52,14 @@ function Main() {
         </p>
         <p>
           Outside of work, you’ll find me digging for music, hosting the
-          occasional club night, or trying to coax a toddler into their shoes.
+          occasional club night, or trying to coax a toddler into her shoes.
         </p>
       </div>
-      <h2 className="sticky top-0 bg-brand-bg z-10 py-5">
-        <span className="text-sm absolute transform -translate-x-4 translate-y-1 text-brand-main">
+      <h2 className="sticky top-0 bg-brand-bg z-10 py-4">
+        <span className="text-sm absolute transform -translate-x-4 translate-y-1 text-brand-main bg-brand-bg">
           &gt;{" "}
         </span>
-        projects <span className="animate-blink-text text-brand-main">_</span>
+        projects
       </h2>
       <ProjectCard />
       <ScrollIndicator />

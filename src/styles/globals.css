@@ -25,6 +25,10 @@ body {
   li {
     @apply mt-0 text-xs;
   }
+
+  a {
+    @apply underline underline-offset-2;
+  }
 }
 
 @theme {
