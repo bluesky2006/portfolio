@@ -1,40 +1,19 @@
 import Socials from "./Socials";
 import Footer from "./Footer";
 import Nav from "./Nav";
+import Strapline from "./Strapline";
 
 function Header() {
   return (
-    <header className="lg:sticky top-0 flex lg:h-screen lg:w-[50%] w-[70%] flex-col lg:justify-between pt-24 pb-12">
-      <div className="flex flex-col gap-8">
-        <h1 className="flex flex-col justify-start">
-          <span className="text-brand-main text-3xl absolute pt-2">&gt; </span>{" "}
-          <div className="ml-8">
-            <span>simon.&#x200b;busby()</span>
-            <span className="animate-blink-text text-brand-main">_</span>
-          </div>
-        </h1>
-        <div className="ml-8 flex flex-col gap-3">
-          <h2>Junior software developer</h2>
-          <h3>Building engaging, well-crafted digital products</h3>
-          <p className="mt-8 mr-15">
-            I&apos;m a{" "}
-            <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
-              software developer
-            </strong>{" "}
-            and former{" "}
-            <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
-              print designer
-            </strong>{" "}
-            based in Somerset, UK with a background in creating{" "}
-            <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
-              clean, beautiful content
-            </strong>
-          </p>
+    <header className="lg:sticky lg:top-24 top-12 flex lg:h-[80vh] lg:w-[50%] w-[70%] flex-col lg:justify-between">
+      <div>
+        <Strapline />
+        <aside className="hidden lg:block">
           <Nav />
-          <Footer />
-        </div>
+        </aside>
       </div>
-      <div className="flex flex-col gap-5">
+      <div>
+        <Footer />
         <Socials />
       </div>
     </header>
