@@ -21,7 +21,7 @@ function ScrollIndicator() {
 
   return (
     <div
-      className={`fixed bottom-6 left-[49.5%] transition-opacity duration-500 ${
+      className={`fixed bottom-6 lg:left-[49.5%] left-2 transition-opacity duration-500 ${
         hide ? "opacity-0" : "opacity-100"
       }`}
     >

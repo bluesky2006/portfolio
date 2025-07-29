@@ -6,7 +6,7 @@ function Nav() {
   ];
 
   return (
-    <nav className="flex flex-col mt-10 border-l-2 border-l-brand-main">
+    <nav className="flex flex-col border-l-2 border-l-brand-main">
       {links.map(({ id, label }) => (
         <a
           key={id}
