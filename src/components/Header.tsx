@@ -1,9 +1,10 @@
 import Socials from "./Socials";
 import Footer from "./Footer";
+import Nav from "./Nav";
 
 function Header() {
   return (
-    <header className="lg:sticky top-0 flex lg:h-screen lg:w-[50%] md:w-[80%] flex-col lg:justify-between pt-24 pb-12">
+    <header className="lg:sticky top-0 flex lg:h-screen lg:w-[50%] w-[70%] flex-col lg:justify-between pt-24 pb-12">
       <div className="flex flex-col gap-8">
         <h1 className="flex flex-col justify-start">
           <span className="text-brand-main text-3xl absolute pt-2">&gt; </span>{" "}
@@ -29,10 +30,11 @@ function Header() {
               clean, beautiful content
             </strong>
           </p>
+          <Nav />
+          <Footer />
         </div>
       </div>
       <div className="flex flex-col gap-5">
-        <Footer />
         <Socials />
       </div>
     </header>
