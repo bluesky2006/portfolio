@@ -1,8 +1,8 @@
 function Nav() {
   const links = [
     { id: "bio", label: "bio" },
-    { id: "projects", label: "projects" },
     { id: "experience", label: "experience" },
+    { id: "projects", label: "projects" },
   ];
 
   return (
