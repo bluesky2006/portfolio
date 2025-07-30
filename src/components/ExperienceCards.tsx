@@ -19,7 +19,7 @@ function ExperienceCards() {
                 alt="logo"
                 className="absolute right-0"
               />
-              <h2 className="text-brand-main mb-4">{title}</h2>
+              <h2 className="text-brand-main mb-4 mr-20">{title}</h2>
               <h3 className="whitespace-pre-line mb-4 italic text-sm">
                 {company}
               </h3>
