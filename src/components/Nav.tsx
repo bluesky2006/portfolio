@@ -11,7 +11,7 @@ function Nav() {
         <a
           key={id}
           href={`#${id}`}
-          className="text-sm font-bold hover:text-brand-main text-white no-underline py-1 pl-5 transition delay-50 duration-300 hover:translate-x-2"
+          className="text-sm font-bold tracking-wide hover:text-brand-main text-white no-underline py-1 pl-5 transition delay-50 duration-300 hover:translate-x-2"
         >
           {label}
         </a>

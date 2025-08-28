@@ -4,7 +4,7 @@ import Pill from "./Pill";
 function ProjectCards() {
   return (
     <div>
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-15">
         {projects.map((project, index) => {
           const { title, summary, description, stack, link, date } = project;
           return (
@@ -16,9 +16,7 @@ function ProjectCards() {
                 <h2 className="text-brand-main">{title}</h2>
                 <p className="text-brand-main italic mb-0">{date}</p>
               </div>
-              <h3 className="whitespace-pre-line mb-4 italic text-sm">
-                {summary}
-              </h3>
+              <h3 className="whitespace-pre-line mb-4 italic text-sm">{summary}</h3>
               <p className="whitespace-pre-line">{description}</p>
               <ul className="flex flex-row flex-wrap gap-2 my-6">
                 {stack.map((item, index) => (

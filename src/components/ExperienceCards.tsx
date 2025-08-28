@@ -5,7 +5,7 @@ import Link from "next/link";
 function ExperienceCards() {
   return (
     <div>
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-15">
         {experience.map((exp, index) => {
           const { title, company, description, date, logo, url } = exp;
           return (

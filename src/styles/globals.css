@@ -19,7 +19,7 @@ body {
   }
 
   p {
-    @apply mb-4 text-sm;
+    @apply mb-4 text-sm leading-relaxed;
   }
 
   li {
