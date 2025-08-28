@@ -15,10 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="bg-brand-bg mx-auto min-h-screen max-w-screen-xl">
-        {children}
-      </body>
+    <html lang="en" className="scroll-smooth">
+      <body className="bg-brand-bg mx-auto min-h-screen max-w-screen-xl">{children}</body>
     </html>
   );
 }
