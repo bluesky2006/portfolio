@@ -17,4 +17,13 @@ export const experience = [
     logo: "/pd.png",
     url: "https://pipdecks.com",
   },
+  {
+    title: "Head of Content Production",
+    company: "Law Business Research",
+    date: "January 2011–August 2021",
+    description:
+      "As Head of Content Production at Law Business Research, I led the creative direction for multiple brand and product redesigns, including the transformation of four bimonthly journals into premium quarterly magazines. I spearheaded a print-to-digital transition strategy that included the rollout of digital platforms like Foleon and laid the groundwork for CMS-based publishing via Setka. I introduced an XML-first workflow that automated 90% of layout for the flagship GTDT series, managed quality control across 400+ titles annually, and oversaw end-to-end production, scheduling and printer liaison.",
+    logo: "/lbr.png",
+    url: "https://www.lbresearch.com",
+  },
 ];
