@@ -1,5 +1,51 @@
 export const projects = [
   {
+    title: "Essentience",
+    date: "Ongoing",
+    summary: "Digital deck-of-cards app for daily wellness and soft skills practice",
+    description:
+      "Essentience is a React Native app that digitises a physical deck of wellness and soft skills printed cards I designed in InDesign. The app imports structured content from InDesign-exported XML and presents interactive card experiences across four categories – Body, Heart, Mind and Soul. Features thus far  include browsing by pillar, search and keyword filtering, saving favourites and video. The project has been a key learning ground for Expo Router, dynamic navigation and structuring reusable card components.\n\nEssentience is a new company that is crowdfunding in November, so the project is private until then.",
+    stack: ["React Native", "Expo", "Nativewind"],
+    link: [
+      {
+        label: "GitHub (currently private)",
+        url: "https://github.com/bluesky2006/essentience-app",
+      },
+    ],
+    screenshots: [
+      "/screens/essentience_1.png",
+      "/screens/essentience_2.png",
+      "/screens/essentience_3.png",
+      "/screens/essentience_4.png",
+      "/screens/essentience_5.png",
+    ],
+  },
+  {
+    title: "kr8",
+    date: "Ongoing",
+    summary:
+      "Dual-platform 'virtual record box' for DJs, combining a desktop helper app and mobile companion",
+    description:
+      "kr8 is a music management platform designed for DJs to bridge the gap between desktop and mobile. The Electron desktop helper parses playlists and extracts metadata from DJ software such as Rekordbox and Traktor, storing it in a Supabase/PostgreSQL database. A React Native mobile companion app then presents this library as vinyl-style record sleeves, complete with playlist browsing, track metadata and filtering. The platform focuses on portability and a tactile, visually rich way to interact with digital record collections.\n\nI am co-developing the platform with a friend, currently focusing my efforts on the front-end while he focuses on the back-end.",
+    stack: ["Electron", "React Native", "Nativewind", "Supabase", "PostgreSQL", "Node.js"],
+    link: [
+      {
+        label: "GitHub (desktop)",
+        url: "https://github.com/bluesky2006/kr8-desktop",
+      },
+      {
+        label: "GitHub (mobile)",
+        url: "https://github.com/bluesky2006/kr8-mobile",
+      },
+      {
+        label: "GitHub (server)",
+        url: "https://github.com/bluesky2006/kr8-server",
+      },
+    ],
+    screenshots: [],
+  },
+
+  {
     title: "reci-p.ai",
     date: "July 2025",
     summary: "AI-powered app that reverse engineers recipes from food labels",
@@ -13,6 +59,7 @@ export const projects = [
         url: "https://www.northcoders.com/blog/reci-p-ai/",
       },
     ],
+    screenshots: [],
   },
   {
     title: "northcoders news",
@@ -34,6 +81,7 @@ export const projects = [
         url: "https://github.com/bluesky2006/nc-news-be",
       },
     ],
+    screenshots: [],
   },
   {
     title: "portfolio",
