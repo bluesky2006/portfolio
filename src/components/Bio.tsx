@@ -10,7 +10,7 @@ function Bio() {
       <div>
         <p>
           For over a decade, I worked in publishing, crafting layouts, wrangling type and obsessing
-          over margins and grids. I loved the tactility of prinnt design, the problem-solving in
+          over margins and grids. I loved the tactility of print design, the problem-solving in
           structure, the satisfaction of clarity. But as the industry shifted and tools evolved, I
           found myself drawn more and more to the screen – the logic, the interactivity and the
           code.
