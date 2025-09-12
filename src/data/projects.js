@@ -27,7 +27,15 @@ export const projects = [
       "Dual-platform 'virtual record box' for DJs, combining a desktop helper app and mobile companion",
     description:
       "kr8 is a music management platform designed for DJs to bridge the gap between desktop and mobile. The Electron desktop helper parses playlists and extracts metadata from DJ software such as Rekordbox and Traktor, storing it in a Supabase/PostgreSQL database. A React Native mobile companion app then presents this library as vinyl-style record sleeves, complete with playlist browsing, track metadata and filtering. The platform focuses on portability and a tactile, visually rich way to interact with digital record collections.\n\nI am co-developing the platform with a friend, currently focusing my efforts on the front-end while he focuses on the back-end.",
-    stack: ["Electron", "React Native", "Nativewind", "Supabase", "PostgreSQL", "Node.js"],
+    stack: [
+      "Electron",
+      "React Native",
+      "Nativewind",
+      "Supabase",
+      "PostgreSQL",
+      "Node.js",
+      "TypeScript",
+    ],
     link: [
       {
         label: "GitHub (desktop)",
