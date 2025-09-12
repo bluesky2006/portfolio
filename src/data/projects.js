@@ -4,11 +4,11 @@ export const projects = [
     date: "Ongoing",
     summary: "Digital deck-of-cards app for daily wellness and soft skills practice",
     description:
-      "Essentience is a React Native app that digitises a physical deck of wellness and soft skills printed cards I designed in InDesign. The app imports structured content from InDesign-exported XML and presents interactive card experiences across four categories – Body, Heart, Mind and Soul. Features thus far  include browsing by pillar, search and keyword filtering, saving favourites and video. The project has been a key learning ground for Expo Router, dynamic navigation and structuring reusable card components.\n\nEssentience is a new company that is crowdfunding in November, so the project is private until then.",
+      "Essentience is a React Native app that digitises a physical deck of wellness and soft skills printed cards I designed in InDesign. The app imports structured content from InDesign-exported XML and presents interactive card experiences across four categories – Body, Heart, Mind and Soul. Features thus far  include browsing by pillar, search and keyword filtering, saving favourites and video. The project has been a key learning ground for Expo Router, dynamic navigation and structuring reusable card components.\n\nEssentience is a new company that is crowdfunding in November, so the codebase is currently private.",
     stack: ["React Native", "Expo", "Nativewind"],
     link: [
       {
-        label: "GitHub (currently private)",
+        label: "GitHub (private)",
         url: "https://github.com/bluesky2006/essentience-app",
       },
     ],
