@@ -84,11 +84,11 @@ export const projects = [
     screenshots: [],
   },
   {
-    title: "D&D API Explorer",
+    title: "Tome of Threats",
     date: "May 2025",
     summary: "React + Vite project that browses Dungeons & Dragons 5e API resources",
     description:
-      "D&D API Explorer is a React + Vite project that pulls selected information from the open Dungeons & Dragons 5e API and presents it in a clean, browsable interface. Built as part of the Northcoders Full-Stack Bootcamp, the project was pair-programmed to strengthen skills in React, API integration and project structure.\n\nFeatures include browsing D&D 5e resources via the API, modern React with functional components, client-side routing powered by React Router, and hot-reload/build via Vite. The app is structured with organised components, modular styling and helper functions for fetching data.",
+      "Tome of Threats is a React + Vite project that pulls selected information from the open Dungeons & Dragons 5e API and presents it in a clean, browsable interface. Built as part of the Northcoders Full-Stack Bootcamp, the project was pair-programmed to strengthen skills in React, API integration and project structure.\n\nFeatures include browsing D&D 5e resources via the API, modern React with functional components, client-side routing powered by React Router, and hot-reload/build via Vite. The app is structured with organised components, modular styling and helper functions for fetching data.",
     stack: ["React", "Vite", "JavaScript"],
     link: [
       {
