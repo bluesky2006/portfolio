@@ -1,7 +1,26 @@
 export const projects = [
   {
+    title: "cur8or",
+    date: "October 2025",
+    summary: "Virtual exhibition curator for browsing and saving artworks from museum collections",
+    description:
+      "cur8or is a web app that lets users browse public art collections and curate their own virtual exhibitions. It aggregates data from museum APIs such as the Cleveland Museum of Art and the Art Institute of Chicago, normalising the results into a unified interface. Users can search by keyword, filter by artworks with images, and save pieces into a personal exhibition view with custom titles and descriptions.\n\nBuilt with Next.js 15, Tailwind and TypeScript, the project focuses on client-side state management, API data normalisation and responsive UI design. It also includes a custom ExhibitionContext for handling user selections and dynamic rendering of saved artworks.",
+    stack: ["Next.js", "TypeScript", "Tailwind"],
+    link: [
+      {
+        label: "GitHub",
+        url: "https://github.com/bluesky2006/cur8or",
+      },
+      {
+        label: "Live site",
+        url: "https://cur8or.vercel.app/",
+      },
+    ],
+    screenshots: [],
+  },
+  {
     title: "Essentience",
-    date: "Ongoing",
+    date: "July 2025 - Ongoing",
     summary: "Digital deck-of-cards app for daily wellness and soft skills practice",
     description:
       "Essentience is a React Native app that digitises a physical deck of wellness and soft skills printed cards I designed in InDesign. The app imports structured content from InDesign-exported XML and presents interactive card experiences across four categories – Body, Heart, Mind and Soul. Features thus far  include browsing by pillar, search and keyword filtering, saving favourites and video. The project has been a key learning ground for Expo Router, dynamic navigation and structuring reusable card components.\n\nEssentience is a new company that is crowdfunding in November, so the codebase is currently private.",
@@ -14,15 +33,15 @@ export const projects = [
     ],
     screenshots: [
       "/screens/essentience_1.png",
-      "/screens/essentienc e_2.png",
-      "/screens/essentiaence_3.png",
+      "/screens/essentience_2.png",
+      "/screens/essentience_3.png",
       "/screens/essentience_4.png",
       "/screens/essentience_5.png",
     ],
   },
   {
     title: "kr8",
-    date: "Ongoing",
+    date: "July 2025 - Ongoing",
     summary:
       "Dual-platform 'virtual record box' for DJs, combining a desktop helper app and mobile companion",
     description:
@@ -104,7 +123,7 @@ export const projects = [
     summary: "This website",
     description:
       "A simple website I built to show-off my portfolio work and experience, and learn a few new skills (in this case, Tailwind and Next.js).",
-    stack: ["Next.js", "Tailwind"],
+    stack: ["Next.js", "Tailwind", "React"],
     link: [{ label: "Live site", url: "https://simonbusby.netlify.app/" }],
   },
   {
