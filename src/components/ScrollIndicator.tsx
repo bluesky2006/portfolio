@@ -21,7 +21,7 @@ function ScrollIndicator() {
 
   return (
     <div
-      className={`fixed bottom-6 lg:left-[49.5%] left-2 transition-opacity duration-500 ${
+      className={`fixed bottom-6 lg:left-344 left-2 transition-opacity duration-500 ${
         hide ? "opacity-0" : "opacity-100"
       }`}
     >
@@ -32,12 +32,7 @@ function ScrollIndicator() {
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M19 9l-7 7-7-7"
-        />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
       </svg>
     </div>
   );

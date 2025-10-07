@@ -12,19 +12,13 @@ function Main() {
       </aside>
       <Bio />
       <section id="experience">
-        <h2 id="experience" className="sticky top-0 bg-brand-bg z-10 py-10 mb-4 -mr-4">
-          <span className="text-sm absolute transform -translate-x-4 translate-y-1 text-brand-main bg-brand-bg">
-            &gt;{" "}
-          </span>
+        <h2 id="experience" className="sticky top-0 bg-brand-bg z-10 py-10 mb-4">
           experience
         </h2>
         <ExperienceCards />
       </section>
       <section id="projects">
-        <h2 id="projects" className="sticky top-0 bg-brand-bg z-10 py-10 mb-4 -mr-4">
-          <span className="text-sm absolute transform -translate-x-4 translate-y-1 text-brand-main bg-brand-bg">
-            &gt;{" "}
-          </span>
+        <h2 id="projects" className="sticky top-0 bg-brand-bg z-10 py-10 mb-4">
           projects
         </h2>
         <ProjectCards />

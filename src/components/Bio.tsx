@@ -1,13 +1,10 @@
+import Skills from "./Skills";
+
 function Bio() {
   return (
     <section id="bio">
-      <h2 className="sticky top-0 bg-brand-bg z-10 py-10 -mr-4">
-        <span className="text-sm absolute transform -translate-x-4 translate-y-1 text-brand-main bg-brand-bg">
-          &gt;{" "}
-        </span>
-        bio
-      </h2>
-      <div>
+      <h2 className="sticky top-0 bg-brand-bg z-10 py-10">bio</h2>
+      <div className="mb-12">
         <p>
           For over a decade, I worked in publishing, crafting layouts, wrangling type and obsessing
           over margins and grids. I loved the tactility of print design, the problem-solving in
@@ -19,24 +16,24 @@ function Bio() {
           What began as a few tentative tweaks to a website soon snowballed into a full immersion in
           full-stack JavaScript development. I completed an intensive bootcamp with{" "}
           <a href="https://www.northcoders.com/" target="_blank">
-            <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
+            <strong className="hover:text-brand-main h-6 w-6 transition-colors duration-300">
               Northcoders
             </strong>
           </a>
           , where I built projects using{" "}
-          <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
+          <strong className="hover:text-brand-main h-6 w-6 transition-colors duration-300">
             React
           </strong>
           ,{" "}
-          <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
+          <strong className="hover:text-brand-main h-6 w-6 transition-colors duration-300">
             Node.js
           </strong>
           ,{" "}
-          <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
+          <strong className="hover:text-brand-main h-6 w-6 transition-colors duration-300">
             PostgreSQL
           </strong>{" "}
           and{" "}
-          <strong className="hover:text-brand-main h-6 w-6 text-white transition-colors duration-300">
+          <strong className="hover:text-brand-main h-6 w-6 transition-colors duration-300">
             MongoDB
           </strong>{" "}
           – with a dash of AI and mobile thrown in for good measure. And along the way, I discovered
@@ -53,6 +50,7 @@ function Bio() {
           trying to coax a toddler into her shoes.
         </p>
       </div>
+      <Skills />
     </section>
   );
 }

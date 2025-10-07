@@ -46,7 +46,7 @@ export default function Lightbox({
         <button
           onClick={onClose}
           aria-label="Close"
-          className="absolute top-3 right-3 text-white text-3xl leading-none"
+          className="absolute top-3 right-3 text-3xl leading-none"
         >
           ×
         </button>

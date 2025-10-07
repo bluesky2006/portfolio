@@ -22,7 +22,7 @@ function ProjectCards() {
           return (
             <div
               key={index}
-              className="border-brand-main border-l-4 px-5 py-1 text-white drop-shadow-sm transition delay-50 duration-300 hover:translate-x-2"
+              className="border-brand-main border-l-4 px-5 py-1 drop-shadow-sm transition delay-50 duration-300 hover:translate-x-2"
             >
               <div className="mb-4 flex flex-row justify-between">
                 <h2 className="text-brand-main">{title}</h2>
