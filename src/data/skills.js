@@ -1,8 +1,9 @@
 export const skills = {
   programming: [
     "JavaScript",
+    "TypeScript",
     "HTML/CSS",
-    "Tailwind",
+    "Tailwind CSS",
     "React",
     "React Native",
     "Expo",
