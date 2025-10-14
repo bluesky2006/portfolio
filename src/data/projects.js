@@ -4,7 +4,7 @@ export const projects = [
     date: "October 2025",
     summary: "Virtual exhibition curator for browsing and saving artworks from museum collections",
     description:
-      "cur8or is a web app that lets users browse public art collections and curate their own virtual exhibitions. It aggregates data from museum APIs such as the Cleveland Museum of Art and the Art Institute of Chicago, normalising the results into a unified interface. Users can search by keyword, filter by artworks with images, and save pieces into a personal exhibition view with custom titles and descriptions.\n\nBuilt with Next.js 15, Tailwind and TypeScript, the project focuses on client-side state management, API data normalisation and responsive UI design. It also includes a custom ExhibitionContext for handling user selections and dynamic rendering of saved artworks.",
+      "cur8or is a web app that lets users browse public art collections and curate their own virtual exhibitions. It aggregates data from APIs at the Cleveland Museum of Art and the Art Institute of Chicago, normalising the results into a unified interface. Users can search by keyword, and save and sort pieces into a personal exhibition view with realistic CSS picture frames.\n\nBuilt with Next.js 15, Tailwind and TypeScript, the project focuses on client-side state management, API data normalisation and responsive UI design. It also includes a custom ExhibitionContext for handling user selections and dynamic rendering of saved artworks.",
     stack: ["Next.js", "TypeScript", "Tailwind"],
     link: [
       {
@@ -87,7 +87,16 @@ export const projects = [
       "A full-stack news aggregator site mimicking Hacker News with voting, commenting and sorting",
     description:
       "Northcoder News is a Reddit-style news site built during the Northcoders bootcamp. Users can view, filter, and sort articles, post comments, and vote on content. The app is powered by a RESTful API built with Node.js, Express, and PostgreSQL, featuring database design, routing, validation, and error handling. It also includes integration testing with Jest and Supertest, and is deployed via Render.",
-    stack: ["React", "Vite", "Express.js", "PostgreSQL", "Node.js", "Jest", "Supertest"],
+    stack: [
+      "React",
+      "Vite",
+      "Express.js",
+      "PostgreSQL",
+      "Node.js",
+      "Jest",
+      "Supertest",
+      "Supabase",
+    ],
     link: [
       { label: "Live frontend", url: "https://nc-news-sgtb.netlify.app/" },
       { label: "Live backend", url: "https://nc-news-3jz4.onrender.com/" },
