@@ -1,5 +1,26 @@
 export const projects = [
   {
+    title: "tiger knee",
+    date: "October 2025",
+    summary:
+      "Freelance web design site promoting creative, modern websites for small businesses and creatives",
+    description:
+      "This site serves as the home of my freelance web design practice — a clean, fun, confident showcase of the services I offer to small businesses and creatives in Somerset and beyond. It highlights my focus on clarity, accessibility and thoughtful design, inviting potential clients to explore my process and get in touch.\n\nBuilt with Next.js 15 and Tailwind CSS, the site features a virbant design system, responsive layouts and sublte yet engaging motion effects powered by Framer Motion.",
+
+    stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+    link: [
+      {
+        label: "GitHub",
+        url: "https://github.com/bluesky2006/tiger-knee",
+      },
+      {
+        label: "Live site",
+        url: "https://tigerknee.netlify.app/",
+      },
+    ],
+    screenshots: [],
+  },
+  {
     title: "cur8or",
     date: "October 2025",
     summary: "Virtual exhibition curator for browsing and saving artworks from museum collections",
