@@ -80,7 +80,7 @@ function ProjectCards() {
             onClick={() => setVisibleCount((prev) => prev + 3)}
             className="text-sm px-6 py-2 border-1 border-brand-main text-[#2b2626] rounded-full transition hover:scale-105 hover:bg-brand-main hover:text-white"
           >
-            Load more projects
+            More projects
           </button>
         </div>
       )}
