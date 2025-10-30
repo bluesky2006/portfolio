@@ -3,41 +3,53 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
+declare global {
+  interface Window {
+    THREE: typeof THREE;
+  }
+}
+
+interface VantaEffect {
+  destroy: () => void;
+  setOptions?: (options: Record<string, unknown>) => void;
+  resize?: () => void;
+}
+
 export default function VantaBackground() {
   const vantaRef = useRef<HTMLDivElement>(null);
+  const effectRef = useRef<VantaEffect | null>(null);
 
   useEffect(() => {
-    let effect: any;
-
     async function loadVanta() {
-      // 🧩 Ensure THREE is attached globally BEFORE loading Vanta
-      if (typeof window !== "undefined") {
-        // @ts-ignore
-        window.THREE = THREE;
+      if (typeof window === "undefined" || effectRef.current) return;
 
-        const VANTA = (await import("vanta/dist/vanta.dots.min")).default;
+      window.THREE = THREE;
 
-        effect = VANTA({
-          el: vantaRef.current,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0x0055e6,
-          color2: 0x0055e6,
-          backgroundColor: 0xfefdfc,
-          showLines: false,
-        });
-      }
+      const vantaModule = await import("vanta/dist/vanta.dots.min");
+      const VANTA = vantaModule.default;
+
+      const effect: VantaEffect = VANTA({
+        el: vantaRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x0055e6,
+        backgroundColor: 0xfefdfc,
+        showLines: false,
+      });
+
+      effectRef.current = effect;
     }
 
     loadVanta();
 
     return () => {
-      if (effect) effect.destroy();
+      effectRef.current?.destroy();
+      effectRef.current = null;
     };
   }, []);
 
