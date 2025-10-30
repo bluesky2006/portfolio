@@ -3,12 +3,6 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-declare global {
-  interface Window {
-    THREE: typeof THREE;
-  }
-}
-
 interface VantaEffect {
   destroy: () => void;
   setOptions?: (options: Record<string, unknown>) => void;
@@ -23,6 +17,7 @@ export default function VantaBackground() {
     async function loadVanta() {
       if (typeof window === "undefined" || effectRef.current) return;
 
+      // ✅ no redeclaration; type is already defined globally
       window.THREE = THREE;
 
       const vantaModule = await import("vanta/dist/vanta.dots.min");
@@ -38,6 +33,7 @@ export default function VantaBackground() {
         scale: 1.0,
         scaleMobile: 1.0,
         color: 0x0055e6,
+        color2: 0x0055e6,
         backgroundColor: 0xfefdfc,
         showLines: false,
       });
