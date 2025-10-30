@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-function Nav() {
-  const links = [
-    { id: "bio", label: "bio" },
-    { id: "experience", label: "experience" },
-    { id: "projects", label: "projects" },
-  ];
+const links = [
+  { id: "bio", label: "bio" },
+  { id: "experience", label: "experience" },
+  { id: "projects", label: "projects" },
+];
 
+function Nav() {
   const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
@@ -18,7 +18,6 @@ function Nav() {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        // Find the section nearest the top that’s intersecting
         const visible = entries
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
@@ -26,7 +25,6 @@ function Nav() {
         if (visible.length > 0) {
           setActive(visible[0].target.id);
         } else {
-          // Edge case: if scrolled to bottom, mark the last section active
           const bottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 50;
           if (bottom) setActive(links[links.length - 1].id);
         }
