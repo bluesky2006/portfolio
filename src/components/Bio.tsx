@@ -3,7 +3,7 @@ import Skills from "./Skills";
 function Bio() {
   return (
     <section id="bio">
-      <h2 className="sticky top-0 bg-brand-bg z-10 py-10">bio</h2>
+      <h2 className="py-10 mb-4">bio</h2>
       <div className="mb-12">
         <p>
           For over a decade, I worked in publishing, crafting layouts, wrangling type and obsessing

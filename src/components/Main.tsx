@@ -10,19 +10,19 @@ function Main() {
       <aside className="hidden md:block lg:hidden fixed right-20 top-12">
         <Nav />
       </aside>
+
       <Bio />
+
       <section id="experience">
-        <h2 id="experience" className="sticky top-0 bg-brand-bg z-10 py-10 mb-4 -mr-10">
-          experience
-        </h2>
+        <h2 className="py-10 mb-4">experience</h2>
         <ExperienceCards />
       </section>
+
       <section id="projects">
-        <h2 id="projects" className="sticky top-0 bg-brand-bg z-10 py-10 mb-4 -mr-10">
-          projects
-        </h2>
+        <h2 className="py-10 mb-4">projects</h2>
         <ProjectCards />
       </section>
+
       <ScrollIndicator />
     </main>
   );
