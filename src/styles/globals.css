@@ -2,7 +2,7 @@
 
 body {
   font-family: Inter, Helvetica, sans-serif;
-  color: #f7feff;
+  color: #2b2626;
 }
 
 @layer base {
@@ -34,8 +34,8 @@ body {
 @theme {
   /* --color-brand-main: #ffff00;
   --color-brand-bg: #25292a; */
-  --color-brand-main: #3cbef7;
-  --color-brand-bg: #22282e;
+  --color-brand-main: #0055e6;
+  --color-brand-bg: #fefdfc;
   --animate-blink-text: blink 2s steps(2, start) infinite;
 
   @keyframes blink {
