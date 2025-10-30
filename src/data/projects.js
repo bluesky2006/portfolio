@@ -5,7 +5,7 @@ export const projects = [
     summary:
       "Freelance web design site promoting creative, modern websites for small businesses and creatives",
     description:
-      "This site serves as the home of my freelance web design practice — a clean, fun, confident showcase of the services I offer to small businesses and creatives in Somerset and beyond. It highlights my focus on clarity, accessibility and thoughtful design, inviting potential clients to explore my process and get in touch.\n\nBuilt with Next.js 15 and Tailwind CSS, the site features a virbant design system, responsive layouts and sublte yet engaging motion effects powered by Framer Motion.",
+      "This site serves as the home of my freelance web design practice – a clean, fun, confident showcase of the services I offer to small businesses and creatives in Somerset and beyond.\n\nIt highlights my focus on clarity, accessibility and thoughtful design, inviting potential clients to explore my process and get in touch.\n\nBuilt with Next.js 15 and Tailwind CSS, the site features a virbant design system, responsive layouts and sublte yet engaging motion effects powered by Framer Motion.",
 
     stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     link: [
@@ -19,6 +19,7 @@ export const projects = [
       },
     ],
     screenshots: [],
+    logo: "/logos/tigerknee.png",
   },
   {
     title: "cur8or",
@@ -38,6 +39,7 @@ export const projects = [
       },
     ],
     screenshots: [],
+    logo: "/logos/cur8or.png",
   },
   {
     title: "Essentience",
@@ -59,6 +61,7 @@ export const projects = [
       "/screens/essentience_4.png",
       "/screens/essentience_5.png",
     ],
+    logo: "/logos/essentience.png",
   },
   {
     title: "kr8",
@@ -83,6 +86,7 @@ export const projects = [
       },
     ],
     screenshots: [],
+    logo: "/logos/kr8.png",
   },
 
   {
@@ -100,6 +104,7 @@ export const projects = [
       },
     ],
     screenshots: [],
+    logo: "",
   },
   {
     title: "northcoders news",
@@ -131,6 +136,7 @@ export const projects = [
       },
     ],
     screenshots: [],
+    logo: "",
   },
   {
     title: "Tome of Threats",
@@ -146,6 +152,7 @@ export const projects = [
       },
     ],
     screenshots: [],
+    logo: "",
   },
   {
     title: "portfolio",
