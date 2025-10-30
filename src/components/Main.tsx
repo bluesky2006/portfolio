@@ -12,13 +12,13 @@ function Main() {
       </aside>
       <Bio />
       <section id="experience">
-        <h2 id="experience" className="sticky top-0 bg-brand-bg z-10 py-10 mb-4">
+        <h2 id="experience" className="sticky top-0 bg-brand-bg z-10 py-10 mb-4 -mr-10">
           experience
         </h2>
         <ExperienceCards />
       </section>
       <section id="projects">
-        <h2 id="projects" className="sticky top-0 bg-brand-bg z-10 py-10 mb-4">
+        <h2 id="projects" className="sticky top-0 bg-brand-bg z-10 py-10 mb-4 -mr-10">
           projects
         </h2>
         <ProjectCards />
