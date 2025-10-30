@@ -78,7 +78,7 @@ function ProjectCards() {
         <div className="flex justify-center mt-8">
           <button
             onClick={() => setVisibleCount((prev) => prev + 3)}
-            className="text-sm px-6 py-2 border-1 border-brand-main text-black rounded-full transition hover:scale-105 hover:bg-brand-main hover:text-white"
+            className="text-sm px-6 py-2 border-1 border-brand-main text-[#2b2626] rounded-full transition hover:scale-105 hover:bg-brand-main hover:text-white"
           >
             Load more projects
           </button>
