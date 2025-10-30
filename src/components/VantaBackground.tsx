@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 interface VantaEffect {
-  destroy: () => void;
+  destroy?: () => void;
   setOptions?: (options: Record<string, unknown>) => void;
   resize?: () => void;
 }
@@ -17,13 +17,12 @@ export default function VantaBackground() {
     async function loadVanta() {
       if (typeof window === "undefined" || effectRef.current) return;
 
-      // ✅ no redeclaration; type is already defined globally
       window.THREE = THREE;
 
       const vantaModule = await import("vanta/dist/vanta.dots.min");
       const VANTA = vantaModule.default;
 
-      const effect: VantaEffect = VANTA({
+      const effect = VANTA({
         el: vantaRef.current,
         mouseControls: true,
         touchControls: true,
@@ -38,13 +37,15 @@ export default function VantaBackground() {
         showLines: false,
       });
 
-      effectRef.current = effect;
+      if (effect) {
+        effectRef.current = effect;
+      }
     }
 
     loadVanta();
 
     return () => {
-      effectRef.current?.destroy();
+      effectRef.current?.destroy?.();
       effectRef.current = null;
     };
   }, []);
