@@ -14,12 +14,12 @@ function Main() {
       <Bio />
 
       <section id="experience">
-        <h2 className="py-10 mb-4">experience</h2>
+        <h2 className="py-10">experience</h2>
         <ExperienceCards />
       </section>
 
       <section id="projects">
-        <h2 className="py-10 mb-4">projects</h2>
+        <h2 className="py-10">projects</h2>
         <ProjectCards />
       </section>
 

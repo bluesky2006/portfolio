@@ -4,7 +4,7 @@ import Pill from "./Pill";
 function Skills() {
   const { programming, design } = skills;
   return (
-    <section className="flex flex-col gap-10 my-5 mr-15">
+    <section className="flex flex-col gap-10 my-5 mr-10">
       <div>
         {/* <p>Programming</p> */}
         <div className="flex flex-row gap-2 flex-wrap">
