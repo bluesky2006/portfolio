@@ -26,7 +26,7 @@ export default function Lightbox({
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/80"
+      className="fixed inset-0 z-[1000] flex items-center justify-center bg-[#2b2626]/90"
       role="dialog"
       aria-modal="true"
       onClick={onClose}
@@ -46,7 +46,7 @@ export default function Lightbox({
         <button
           onClick={onClose}
           aria-label="Close"
-          className="absolute top-3 right-3 text-3xl leading-none"
+          className="fixed top-5 right-5 font-light text-4xl leading-none text-white"
         >
           ×
         </button>
