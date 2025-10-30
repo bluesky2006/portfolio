@@ -32,8 +32,6 @@ body {
 }
 
 @theme {
-  /* --color-brand-main: #ffff00;
-  --color-brand-bg: #25292a; */
   --color-brand-main: #0055e6;
   --color-brand-bg: #fefdfc;
   --animate-blink-text: blink 2s steps(2, start) infinite;
