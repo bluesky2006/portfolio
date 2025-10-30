@@ -41,5 +41,5 @@ export default function VantaBackground() {
     };
   }, []);
 
-  return <div ref={vantaRef} className="fixed inset-0 -z-10" />;
+  return <div ref={vantaRef} className="hidden lg:block fixed inset-0 -z-10" />;
 }
