@@ -11,15 +11,18 @@ function Main() {
         <Nav />
       </aside>
 
-      <Bio />
+      <section id="bio">
+        <h2 className="py-10 text-brand-main">bio</h2>
+        <Bio />
+      </section>
 
       <section id="experience">
-        <h2 className="py-10">experience</h2>
+        <h2 className="py-10 text-brand-main">experience</h2>
         <ExperienceCards />
       </section>
 
       <section id="projects">
-        <h2 className="py-10">projects</h2>
+        <h2 className="py-10 text-brand-main">projects</h2>
         <ProjectCards />
       </section>
 
