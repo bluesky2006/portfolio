@@ -35,7 +35,10 @@ export default function ScreenshotScroller({ screenshots = [], title }: Screensh
   return (
     <>
       <div className="relative mt-4">
-        <div ref={scrollRef} className="overflow-x-auto rounded-xl">
+        <div
+          ref={scrollRef}
+          className="overflow-x-auto rounded-xl w-full max-w-full min-w-0 [contain:inline-size]"
+        >
           <ul className="flex flex-nowrap gap-3 snap-x snap-mandatory pr-8">
             {screenshots.map((src, i) => (
               <li
