@@ -41,28 +41,7 @@ export const projects = [
     screenshots: [],
     logo: "/logos/cur8or.png",
   },
-  {
-    title: "Essentience",
-    date: "July 2025 - Ongoing",
-    summary: "Digital deck-of-cards app for daily wellness and soft skills practice",
-    description:
-      "Essentience is a React Native app that digitises a physical deck of wellness and soft skills printed cards I designed in InDesign. The app imports structured content from InDesign-exported XML and presents interactive card experiences across four categories – Body, Heart, Mind and Soul. Features thus far  include browsing by pillar, search and keyword filtering, saving favourites and video. The project has been a key learning ground for Expo Router, dynamic navigation and structuring reusable card components.\n\nEssentience is a new company that is crowdfunding in November, so the codebase is currently private.",
-    stack: ["React Native", "Expo", "Nativewind"],
-    link: [
-      {
-        label: "GitHub (private)",
-        url: "https://github.com/bluesky2006/essentience-app",
-      },
-    ],
-    screenshots: [
-      "/screens/essentience_1.png",
-      "/screens/essentience_2.png",
-      "/screens/essentience_3.png",
-      "/screens/essentience_4.png",
-      "/screens/essentience_5.png",
-    ],
-    logo: "/logos/essentience.png",
-  },
+
   {
     title: "kr8",
     date: "July 2025 - Ongoing",
@@ -88,7 +67,37 @@ export const projects = [
     screenshots: [],
     logo: "/logos/kr8.png",
   },
-
+  {
+    title: "glitterball",
+    date: "May 2025",
+    summary: "A small, stylised website promoting glitterball – a club night I co-run in Somerset",
+    description:
+      "glitterball is a website for a revived club night I co-run in Somerset, inspired by 80s/90s rave flyers and vintage photography. It began as a ‘vibe-coding’ experiment using ChatGPT before I formally trained as a developer, and was part of what sparked my shift toward software development.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    link: [{ label: "Live site", url: "https://glitterball.info" }],
+  },
+  {
+    title: "Essentience",
+    date: "July 2025 - Ongoing",
+    summary: "Digital deck-of-cards app for daily wellness and soft skills practice",
+    description:
+      "Essentience is a React Native app that digitises a physical deck of wellness and soft skills printed cards I designed in InDesign. The app imports structured content from InDesign-exported XML and presents interactive card experiences across four categories – Body, Heart, Mind and Soul. Features thus far  include browsing by pillar, search and keyword filtering, saving favourites and video. The project has been a key learning ground for Expo Router, dynamic navigation and structuring reusable card components.\n\nEssentience is a new company that is crowdfunding in November, so the codebase is currently private.",
+    stack: ["React Native", "Expo", "Nativewind"],
+    link: [
+      {
+        label: "GitHub (private)",
+        url: "https://github.com/bluesky2006/essentience-app",
+      },
+    ],
+    screenshots: [
+      "/screens/essentience_1.png",
+      "/screens/essentience_2.png",
+      "/screens/essentience_3.png",
+      "/screens/essentience_4.png",
+      "/screens/essentience_5.png",
+    ],
+    logo: "/logos/essentience.png",
+  },
   {
     title: "reci-p.ai",
     date: "July 2025",
@@ -153,23 +162,5 @@ export const projects = [
     ],
     screenshots: [],
     logo: "",
-  },
-  {
-    title: "portfolio",
-    date: "July 2025",
-    summary: "This website",
-    description:
-      "A simple website I built to show-off my portfolio work and experience, and learn a few new skills (in this case, Tailwind and Next.js).",
-    stack: ["Next.js", "Tailwind", "React"],
-    link: [{ label: "Live site", url: "https://simonbusby.netlify.app/" }],
-  },
-  {
-    title: "glitterball",
-    date: "May 2025",
-    summary: "A small, stylised website promoting glitterball – a club night I co-run in Somerset",
-    description:
-      "glitterball is a website for a revived club night I co-run in Somerset, inspired by 80s/90s rave flyers and vintage photography. It began as a ‘vibe-coding’ experiment using ChatGPT before I formally trained as a developer, and was part of what sparked my shift toward software development.",
-    stack: ["HTML", "CSS", "JavaScript"],
-    link: [{ label: "Live site", url: "https://glitterball.info" }],
   },
 ];
