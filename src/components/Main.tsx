@@ -12,17 +12,17 @@ function Main() {
       </aside>
 
       <section id="bio">
-        <h2 className="py-10 text-brand-main">bio</h2>
+        <h2 className="py-10 text-brand-main font-bold tracking-wide">bio</h2>
         <Bio />
       </section>
 
       <section id="experience">
-        <h2 className="py-10 text-brand-main">experience</h2>
+        <h2 className="py-10 text-brand-main font-bold tracking-wide">experience</h2>
         <ExperienceCards />
       </section>
 
       <section id="projects">
-        <h2 className="py-10 text-brand-main">projects</h2>
+        <h2 className="py-10 text-brand-main font-bold tracking-wide">projects</h2>
         <ProjectCards />
       </section>
 
