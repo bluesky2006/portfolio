@@ -28,10 +28,10 @@ function ProjectCards() {
         return (
           <div
             key={index}
-            className="relative border-brand-main border-l-4 px-5 py-1 transition delay-50 duration-300 hover:translate-x-2"
+            className="relative border-brand-main border-l-1 border-dotted rounded-lg px-5 py-5 transition delay-50 duration-300"
           >
             {logo && (
-              <div className="absolute right-0 top-0">
+              <div className="absolute right-0">
                 <div className="relative w-[70px] h-[70px]">
                   <Image
                     src={logo || "/placeholder.png"}
@@ -59,10 +59,10 @@ function ProjectCards() {
               ))}
             </ul>
 
-            <ul className="mb-4 flex flex-row flex-wrap gap-5">
+            <ul className="flex flex-row flex-wrap gap-5">
               {link.map((item, i) => (
                 <li key={i} className="transition hover:scale-110">
-                  <span className="text-brand-main">&gt;</span>
+                  <span className="text-brand-main">&gt; </span>
                   <a href={item.url} target="_blank" rel="noreferrer">
                     {item.label}
                   </a>

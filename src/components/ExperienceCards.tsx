@@ -11,7 +11,7 @@ function ExperienceCards() {
           return (
             <div
               key={index}
-              className="border-brand-main border-l-4 px-5 py-1 transition delay-50 duration-300 hover:translate-x-2 relative"
+              className="relative border-brand-main border-l-1 border-dotted rounded-lg px-5 py-5"
             >
               <Link href={url} target="_blank" rel="noopener noreferrer">
                 <Image
@@ -25,7 +25,7 @@ function ExperienceCards() {
               <h2 className="mb-4 mr-20">{title}</h2>
               <h3 className="whitespace-pre-line mb-4 italic text-sm">{company}</h3>
               <p>{date}</p>
-              <p className="whitespace-pre-line">{description}</p>
+              <p className="whitespace-pre-line mb-0">{description}</p>
             </div>
           );
         })}
