@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Simon Busby | Portfolio",
@@ -17,9 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="relative mx-auto min-h-screen max-w-screen-xl bg-transparent">
-        {/* overlay gradient */}
-        <div className="fixed inset-0 -z-5 pointer-events-none bg-gradient-to-r from-brand-white/0 via-brand-white/80 to-brand-white dark:from-brand-black/0 dark:via-brand-black/80 dark:to-brand-black" />
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="fixed inset-0 -z-5 pointer-events-none bg-gradient-to-r from-brand-white/0 via-brand-white/80 to-brand-white dark:from-brand-black/0 dark:via-brand-black/80 dark:to-brand-black" />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

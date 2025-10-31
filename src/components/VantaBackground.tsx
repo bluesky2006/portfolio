@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { useTheme } from "next-themes";
 
 interface VantaEffect {
   destroy?: () => void;
@@ -11,23 +12,21 @@ interface VantaEffect {
 
 export default function VantaBackground() {
   const vantaRef = useRef<HTMLDivElement>(null);
-  const effectRef = useRef<VantaEffect | null>(null);
+  const effectRef = useRef<VantaEffect | null | undefined>(null);
+  const { resolvedTheme } = useTheme(); // ← detects light/dark dynamically
 
   useEffect(() => {
-    async function loadVanta() {
-      if (typeof window === "undefined" || effectRef.current) return;
+    async function initVanta() {
+      if (!vantaRef.current) return;
+
+      // remove any previous instance first
+      effectRef.current?.destroy?.();
 
       window.THREE = THREE;
-
       const vantaModule = await import("vanta/dist/vanta.dots.min");
       const VANTA = vantaModule.default;
 
-      // Detect system or document dark mode
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const isDark =
-        prefersDark ||
-        document.documentElement.classList.contains("dark") ||
-        document.body.classList.contains("dark");
+      const isDark = resolvedTheme === "dark";
 
       const effect = VANTA({
         el: vantaRef.current,
@@ -40,20 +39,23 @@ export default function VantaBackground() {
         scaleMobile: 1.0,
         color: 0x0055e6,
         color2: 0x0055e6,
-        backgroundColor: isDark ? 0x111111 : 0xfefdfc, // 🔁 switch here
+        backgroundColor: isDark ? 0x2b2626 : 0xfefdfc,
         showLines: false,
       });
 
-      if (effect) effectRef.current = effect;
+      effectRef.current = effect;
     }
 
-    loadVanta();
+    initVanta();
 
+    // clean up on unmount or theme change
     return () => {
-      effectRef.current?.destroy?.();
+      if (effectRef.current?.destroy) {
+        effectRef.current.destroy();
+      }
       effectRef.current = null;
     };
-  }, []);
+  }, [resolvedTheme]); // 👈 re-run whenever theme changes
 
   return <div ref={vantaRef} className="hidden lg:block fixed inset-0 -z-10" />;
 }
