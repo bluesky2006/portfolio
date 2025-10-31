@@ -49,7 +49,7 @@ function Nav() {
           className={`text-md font-bold tracking-wide no-underline py-1 pl-5 transition-all duration-300 ${
             active === id
               ? "scale-110 text-brand-main translate-x-10"
-              : "scale-100 text-gray-800 hover:text-brand-main"
+              : "scale-100  dark:text- hover:text-brand-main"
           }`}
         >
           {label}

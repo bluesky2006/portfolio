@@ -22,6 +22,13 @@ export default function VantaBackground() {
       const vantaModule = await import("vanta/dist/vanta.dots.min");
       const VANTA = vantaModule.default;
 
+      // Detect system or document dark mode
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const isDark =
+        prefersDark ||
+        document.documentElement.classList.contains("dark") ||
+        document.body.classList.contains("dark");
+
       const effect = VANTA({
         el: vantaRef.current,
         mouseControls: true,
@@ -33,13 +40,11 @@ export default function VantaBackground() {
         scaleMobile: 1.0,
         color: 0x0055e6,
         color2: 0x0055e6,
-        backgroundColor: 0xfefdfc,
+        backgroundColor: isDark ? 0x111111 : 0xfefdfc, // 🔁 switch here
         showLines: false,
       });
 
-      if (effect) {
-        effectRef.current = effect;
-      }
+      if (effect) effectRef.current = effect;
     }
 
     loadVanta();

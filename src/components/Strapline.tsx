@@ -13,7 +13,9 @@ function Strapline() {
       </h1>
       <div className="flex flex-col gap-3">
         <h2 className="text-brand-main">Junior software developer</h2>
-        <h3 className="italic text-gray-800">Building engaging, beautiful digital products</h3>
+        <h3 className="italic text-gray-800 dark:text-gray-200">
+          Building engaging, beautiful digital products
+        </h3>
         <p className="mt-12 mb-16 mr-15">
           I&apos;m a{" "}
           <strong className="hover:text-brand-main h-6 w-6 transition-colors duration-300">

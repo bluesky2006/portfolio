@@ -2,7 +2,7 @@
 
 body {
   font-family: Inter, Helvetica, sans-serif;
-  color: #2b2626;
+  @apply text-brand-black dark:text-brand-white;
 }
 
 @layer base {
@@ -26,14 +26,26 @@ body {
     @apply mt-0 text-xs;
   }
 
+  h1,
+  h2,
+  h3,
+  p,
+  li {
+    /* Apply theme-aware text colour globally */
+    @apply text-brand-black dark:text-brand-white;
+  }
+
   a {
-    @apply underline underline-offset-2 font-bold;
+    @apply underline underline-offset-2 font-bold
+           text-[--color-brand-main] dark:text-[--color-brand-bg];
   }
 }
 
 @theme {
   --color-brand-main: #0055e6;
   --color-brand-bg: #fefdfc;
+  --color-brand-black: #2b2626;
+  --color-brand-white: #fefdfc;
   --animate-blink-text: blink 2s steps(2, start) infinite;
 
   @keyframes blink {
