@@ -6,7 +6,7 @@ import Nav from "./Nav";
 
 function Main() {
   return (
-    <main className="flex w-[100%] md:w-[70%] lg:w-[50%] flex-col gap-26 lg:pb-12">
+    <main className="flex w-[90%] md:w-[70%] lg:w-[50%] flex-col gap-26 lg:pb-12">
       <aside className="hidden md:block lg:hidden fixed right-20 top-12">
         <Nav />
       </aside>
