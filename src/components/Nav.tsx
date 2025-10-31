@@ -46,7 +46,7 @@ function Nav() {
         <a
           key={id}
           href={`#${id}`}
-          className={`text-md font-bold tracking-wide no-underline py-1 pl-5 transition-all duration-300 ${
+          className={`text-md font-semibold tracking-wide no-underline py-1 pl-5 transition-all duration-300 ${
             active === id
               ? "scale-110 text-brand-main translate-x-10"
               : "scale-100  dark:text- hover:text-brand-main"
