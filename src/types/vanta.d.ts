@@ -13,3 +13,9 @@ interface Window {
   };
   THREE?: unknown;
 }
+
+interface VantaEffect {
+  destroy?: () => void;
+  setOptions?: (options: Record<string, unknown>) => void;
+  resize?: () => void;
+}

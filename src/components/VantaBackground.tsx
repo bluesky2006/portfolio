@@ -4,16 +4,10 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { useTheme } from "next-themes";
 
-interface VantaEffect {
-  destroy?: () => void;
-  setOptions?: (options: Record<string, unknown>) => void;
-  resize?: () => void;
-}
-
 export default function VantaBackground() {
   const vantaRef = useRef<HTMLDivElement>(null);
   const effectRef = useRef<VantaEffect | null | undefined>(null);
-  const { resolvedTheme } = useTheme(); // ← detects light/dark dynamically
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     async function initVanta() {
@@ -55,7 +49,7 @@ export default function VantaBackground() {
       }
       effectRef.current = null;
     };
-  }, [resolvedTheme]); // 👈 re-run whenever theme changes
+  }, [resolvedTheme]);
 
   return <div ref={vantaRef} className="hidden lg:block fixed inset-0 -z-10" />;
 }
