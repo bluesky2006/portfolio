@@ -55,7 +55,9 @@ function ProjectCards() {
 
             <ul className="my-6 flex flex-row flex-wrap gap-2">
               {stack.map((item, i) => (
-                <Pill key={i}>{item}</Pill>
+                <li key={i}>
+                  <Pill>{item}</Pill>
+                </li>
               ))}
             </ul>
 
