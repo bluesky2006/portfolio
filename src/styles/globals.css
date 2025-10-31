@@ -44,7 +44,7 @@ body {
 @theme {
   --color-brand-main: #0055e6;
   --color-brand-bg: #fefdfc;
-  --color-brand-black: #2b2626;
+  --color-brand-black: #111111;
   --color-brand-white: #fefdfc;
   --animate-blink-text: blink 2s steps(2, start) infinite;
 

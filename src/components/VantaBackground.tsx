@@ -39,7 +39,7 @@ export default function VantaBackground() {
         scaleMobile: 1.0,
         color: 0x0055e6,
         color2: 0x0055e6,
-        backgroundColor: isDark ? 0x2b2626 : 0xfefdfc,
+        backgroundColor: isDark ? 0x111111 : 0xfefdfc,
         showLines: false,
       });
 
