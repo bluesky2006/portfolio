@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 
 function ScrollIndicator() {
-  const [hide, setHide] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const [atBottom, setAtBottom] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -10,9 +11,8 @@ function ScrollIndicator() {
       const windowHeight = window.innerHeight;
       const fullHeight = document.documentElement.scrollHeight;
 
-      const isBottom = scrollY + windowHeight >= fullHeight - 50;
-
-      setHide(isBottom);
+      setVisible(scrollY > 100);
+      setAtBottom(scrollY + windowHeight >= fullHeight - 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -21,8 +21,8 @@ function ScrollIndicator() {
 
   return (
     <div
-      className={`fixed bottom-6 lg:left-1/2 left-2 transition-opacity duration-500 ${
-        hide ? "opacity-0" : "opacity-100"
+      className={`hidden lg:block fixed bottom-6 lg:left-1/2 left-2 transition-opacity duration-500 ${
+        visible && !atBottom ? "opacity-100" : "opacity-0"
       }`}
     >
       <svg
