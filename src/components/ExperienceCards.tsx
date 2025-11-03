@@ -13,15 +13,18 @@ function ExperienceCards() {
               key={index}
               className="relative border-brand-main border-l-1 border-dotted rounded-lg px-5 py-5"
             >
-              <Link href={url} target="_blank" rel="noopener noreferrer">
-                <Image
-                  src={logo}
-                  width={70}
-                  height={70}
-                  alt={`${company} logo`}
-                  className="absolute right-0 hover:scale-105 transition"
-                />
-              </Link>
+              {logo && (
+                <Link href={url} target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src={logo}
+                    width={70}
+                    height={70}
+                    alt={`${company} logo`}
+                    className="absolute right-0 hover:scale-105 transition"
+                  />
+                </Link>
+              )}
+
               <h2 className="mb-4 mr-20">{title}</h2>
               <h3 className="whitespace-pre-line mb-4 italic text-sm">{company}</h3>
               <p>{date}</p>
