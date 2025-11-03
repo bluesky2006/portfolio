@@ -28,10 +28,13 @@ function ProjectCards() {
         return (
           <div
             key={index}
-            className="relative border-brand-main border-l-1 border-dotted rounded-lg px-5 py-5 transition delay-50 duration-300"
+            className="group relative border-brand-main border-l-1 border-dotted rounded-lg px-5 py-5 bg-white/70 dark:bg-brand-black/30 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-main/10 hover:bg-white/90 dark:hover:bg-brand-black/40"
           >
+            {/* dotted border overlay */}
+            <span className="pointer-events-none absolute inset-0 rounded-lg border border-dotted border-brand-main opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
             {logo && (
-              <div className="absolute right-0">
+              <div className="absolute right-5">
                 <div className="relative w-[70px] h-[70px]">
                   <Image
                     src={logo || "/placeholder.png"}
