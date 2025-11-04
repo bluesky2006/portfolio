@@ -48,7 +48,7 @@ function ProjectCards() {
               </div>
             )}
 
-            <h2 className="mb-4">{title}</h2>
+            <h2 className="mb-4 group-hover:text-brand-main">{title}</h2>
             <p className="mb-4 italic">{date}</p>
 
             <h3 className="mb-4 whitespace-pre-line italic text-sm">{summary}</h3>

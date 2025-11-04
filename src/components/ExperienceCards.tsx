@@ -28,7 +28,7 @@ function ExperienceCards() {
                 </Link>
               )}
 
-              <h2 className="mb-4 mr-20">{title}</h2>
+              <h2 className="mb-4 mr-20 group-hover:text-brand-main">{title}</h2>
               <h3 className="whitespace-pre-line mb-4 italic text-sm">{company}</h3>
               <p>{date}</p>
               <p className="whitespace-pre-line mb-0">{description}</p>
