@@ -29,9 +29,9 @@ function Bio() {
         usability, structure and communication – translate beautifully to&nbsp;code.
       </p>
       <p>
-        Now I’m looking to combine the best of both worlds. Whether I’m finessing the spacing in a
-        new interface, debugging a server or just trying to get that last media query to behave, I
-        bring curiosity, craft and a drive to make things that feel good to&nbsp;use.
+        Now I combine the best of both worlds. Whether I’m finessing the spacing in a new interface,
+        debugging a server or just trying to get that last media query to behave, I bring curiosity,
+        craft and a drive to make things that feel good to&nbsp;use.
       </p>
       <p className="mb-12">
         Outside of work, you’ll find me digging for music, hosting the occasional club night, or
