@@ -5,7 +5,7 @@ export const projects = [
     summary:
       "Freelance web design site promoting creative, modern websites for small businesses and creatives",
     description:
-      "This site serves as the home of my freelance web design practice – a clean, fun, confident showcase of the services I offer to small businesses and creatives in Somerset and beyond.\n\nIt highlights my focus on clarity, accessibility and thoughtful design, inviting potential clients to explore my process and get in touch.\n\nBuilt with Next.js 15 and Tailwind CSS, the site features a virbant design system, responsive layouts and sublte yet engaging motion effects powered by Framer Motion.",
+      "This site serves as the home of my freelance web design practice – a clean, fun, confident showcase of the services I offer to small businesses and creatives in Somerset and beyond.\n\nIt highlights my focus on clarity, accessibility and thoughtful design, inviting potential clients to explore my process and get in touch.\n\nBuilt with Next.js and Tailwind CSS, the site features a virbant design system, responsive layouts and sublte yet engaging motion effects powered by Framer Motion.",
 
     stack: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
     link: [
@@ -26,7 +26,7 @@ export const projects = [
     date: "October 2025",
     summary: "Virtual exhibition curator for browsing and saving artworks from museum collections",
     description:
-      "cur8or is a web app that lets users browse public art collections and curate their own virtual exhibitions. It aggregates data from APIs at the Cleveland Museum of Art and the Art Institute of Chicago, normalising the results into a unified interface. Users can search by keyword, and save and sort pieces into a personal exhibition view with realistic CSS picture frames.\n\nBuilt with Next.js 15, Tailwind and TypeScript, the project focuses on client-side state management, API data normalisation and responsive UI design. It also includes a custom ExhibitionContext for handling user selections and dynamic rendering of saved artworks.",
+      "cur8or is a web app that lets users browse public art collections and curate their own virtual exhibitions. It aggregates data from APIs at the Cleveland Museum of Art and the Art Institute of Chicago, normalising the results into a unified interface. Users can search by keyword, and save and sort pieces into a personal exhibition view with realistic CSS picture frames.\n\nBuilt with Next.js, Tailwind and TypeScript, the project focuses on client-side state management, API data normalisation and responsive UI design. It also includes a custom ExhibitionContext for handling user selections and dynamic rendering of saved artworks.",
     stack: ["Next.js", "TypeScript", "Tailwind"],
     link: [
       {
@@ -48,7 +48,7 @@ export const projects = [
     summary:
       "Dual-platform 'virtual record box' for DJs, combining a desktop helper app and mobile companion",
     description:
-      "kr8 is a music management platform designed for DJs to bridge the gap between desktop and mobile. The Electron desktop helper parses playlists and extracts metadata from DJ software such as Rekordbox and Traktor, storing it in a Supabase/PostgreSQL database. A React Native mobile companion app then presents this library as vinyl-style record sleeves, complete with playlist browsing, track metadata and filtering. The platform focuses on portability and a tactile, visually rich way to interact with digital record collections.\n\nI am co-developing the platform with a friend, currently focusing my efforts on the front-end while he focuses on the back-end.",
+      "kr8 is a music management platform designed for DJs to bridge the gap between desktop and mobile. The Electron desktop helper parses playlists and extracts metadata from DJ software such as Rekordbox and Traktor, storing it in a Supabase/PostgreSQL database. A React Native mobile companion app then presents this library as vinyl-style record sleeves, complete with playlist browsing, track metadata and filtering. The platform focuses on portability and a tactile, visually rich way to interact with digital record collections.\n\nI am co-developing the platform with Joel Kram, currently focusing my efforts on the front-end while he focuses on the back-end.",
     stack: ["Electron", "React Native", "Nativewind", "PostgreSQL", "Node.js", "TypeScript"],
     link: [
       {
@@ -63,6 +63,10 @@ export const projects = [
         label: "GitHub (server)",
         url: "https://github.com/bluesky2006/kr8-server",
       },
+      {
+        label: "Joel Kram GitHub",
+        url: "https://github.com/pooch1e",
+      },
     ],
     screenshots: [],
     logo: "/logos/kr8.png",
@@ -72,7 +76,7 @@ export const projects = [
     date: "May 2025",
     summary: "A small, stylised website promoting glitterball – a club night I co-run in Somerset",
     description:
-      "glitterball is a website for a revived club night I co-run in Somerset, inspired by 80s/90s rave flyers and vintage photography. It began as a ‘vibe-coding’ experiment using ChatGPT before I formally trained as a developer, and was part of what sparked my shift toward software development.",
+      "glitterball is a website for a revived club night I co-run in Somerset, inspired by 80s/90s rave flyers and featurig bold type and grainy '90s stock photography.\n\nIt began as a ‘vibe-coding’ experiment using ChatGPT before I formally trained as a developer, and was part of what sparked my shift toward software development.",
     stack: ["HTML", "CSS", "JavaScript"],
     link: [{ label: "Live site", url: "https://glitterball.info" }],
   },
