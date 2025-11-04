@@ -11,10 +11,10 @@ function ExperienceCards() {
           return (
             <div
               key={index}
-              className="group relative border-brand-main border-l-1 border-dotted rounded-lg px-5 py-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-main/10 hover:bg-white/90 dark:hover:bg-brand-black/40 hover:border-l-0"
+              className="group relative rounded-lg px-5 py-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-main/10 hover:bg-white/90 dark:hover:bg-brand-black/40 hover:border-l-0"
             >
               {/* dotted border overlay */}
-              <span className="pointer-events-none absolute inset-0 rounded-lg border border-dotted border-brand-main opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="pointer-events-none absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               {logo && (
                 <Link href={url} target="_blank" rel="noopener noreferrer">
