@@ -28,7 +28,7 @@ function ProjectCards() {
         return (
           <div
             key={index}
-            className="group relative border-brand-main border-l-1 border-dotted rounded-lg px-5 py-5 bg-white/70 dark:bg-brand-black/30 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-main/10 hover:bg-white/90 dark:hover:bg-brand-black/40"
+            className="group relative rounded-lg px-5 py-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-main/10 hover:bg-white/90 dark:hover:bg-brand-black/40 hover:border-l-0"
           >
             {/* dotted border overlay */}
             <span className="pointer-events-none absolute inset-0 rounded-lg border border-dotted border-brand-main opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -66,7 +66,7 @@ function ProjectCards() {
 
             <ul className="flex flex-row flex-wrap gap-5">
               {link.map((item, i) => (
-                <li key={i} className="transition hover:scale-110">
+                <li key={i} className="transition hover:scale-110 hover:text-brand-main">
                   <span className="text-brand-main">&gt; </span>
                   <a href={item.url} target="_blank" rel="noreferrer">
                     {item.label}
