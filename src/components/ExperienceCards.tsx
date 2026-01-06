@@ -35,7 +35,6 @@ function ExperienceCards() {
   border-l border-brand-main/20
   pl-4
   transition-all duration-300 will-change-transform
-  hover:translate-x-3
 "
             >
               {/* dotted border overlay */}
@@ -65,7 +64,7 @@ function ExperienceCards() {
                 onClick={() => toggleExpanded(index)}
                 aria-expanded={isExpanded}
                 aria-controls={panelId}
-                className="inline-flex items-center gap-2 text-xs underline underline-offset-4 transition hover:text-brand-main focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-main/60 rounded"
+                className="inline-flex items-center gap-2 text-xs underline underline-offset-4 transition hover:text-brand-main "
               >
                 {isExpanded ? "- Less info" : "+ More info"}
               </button>
@@ -78,7 +77,7 @@ function ExperienceCards() {
                 }`}
               >
                 <div className="overflow-hidden">
-                  <p className="pl-2 whitespace-pre-line text-sm mb-0">{description}</p>
+                  <p className="pl-4 whitespace-pre-line text-sm mb-0">{description}</p>
                 </div>
               </div>
             </div>

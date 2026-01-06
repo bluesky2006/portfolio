@@ -49,7 +49,6 @@ function ProjectCards() {
   border-l border-brand-main/20
   pl-4
   transition-all duration-300 will-change-transform
-  hover:translate-x-3
 "
           >
             <span className="pointer-events-none absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -93,7 +92,7 @@ function ProjectCards() {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="pl-2 whitespace-pre-line text-sm">{description}</p>
+                <p className="pl-4 whitespace-pre-line text-sm">{description}</p>
               </div>
             </div>
 
