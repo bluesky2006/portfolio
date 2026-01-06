@@ -9,7 +9,8 @@ export const experience = [
     url: "https://northcoders.com",
   },
   {
-    title: "Freelance Print Production & Editorial Design",
+    title: "Print Production & Editorial Design",
+    company: "Freelance",
     date: "January 2016–Present",
     description:
       "I provide end-to-end print production and editorial design services for authors, publishers and independent clients. My work spans book and cover design, layout and typesetting, sub-editing, proofreading and project management – guiding titles from manuscript to finished publication.\n\nPrevious projects include 'The History of Video Gaming From Those Who Made It' (The Retro Hour, 2023), 'From Vultures to Vampires' Vols. 1–3 (David Pleasance & Trevor Dickinson, 2021–23) and 'Retro Tea Breaks: Selected Interviews Vol. 1' (Neil Thomas, 2020)",
