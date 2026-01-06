@@ -8,8 +8,21 @@ import ScreenshotScroller from "./ScreenshotScroller";
 
 function ProjectCards() {
   const [visibleCount, setVisibleCount] = useState(3);
+
+  // Track expanded cards (per-card toggle)
+  const [expanded, setExpanded] = useState<Set<number>>(() => new Set());
+
   const visibleProjects = projects.slice(0, visibleCount);
   const hasMore = visibleCount < projects.length;
+
+  function toggleExpanded(index: number) {
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
+    });
+  }
 
   return (
     <div className="flex flex-col gap-15">
@@ -25,16 +38,24 @@ function ProjectCards() {
           logo,
         } = project;
 
+        const isExpanded = expanded.has(index);
+        const panelId = `project-desc-${index}`;
+
         return (
           <div
             key={index}
-            className="group relative rounded-lg px-5 py-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-main/10 hover:bg-white/90 dark:hover:bg-brand-black/40 hover:border-l-0"
+            className="
+  group relative
+  border-l border-brand-main/20
+  pl-4
+  transition-all duration-300 will-change-transform
+  hover:translate-x-3
+"
           >
-            {/* dotted border overlay */}
             <span className="pointer-events-none absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             {logo && (
-              <div className="absolute right-5">
+              <div className="absolute right-0 top-0">
                 <div className="relative w-[70px] h-[70px]">
                   <Image
                     src={logo || "/placeholder.png"}
@@ -52,7 +73,29 @@ function ProjectCards() {
             <p className="mb-4 italic">{date}</p>
 
             <h3 className="mb-4 whitespace-pre-line italic text-sm">{summary}</h3>
-            <p className="whitespace-pre-line">{description}</p>
+
+            {/* Toggle */}
+            <button
+              type="button"
+              onClick={() => toggleExpanded(index)}
+              aria-expanded={isExpanded}
+              aria-controls={panelId}
+              className="inline-flex items-center gap-2 text-xs underline underline-offset-4 transition hover:text-brand-main focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-main/60 rounded"
+            >
+              {isExpanded ? "- Less info" : "+ More info"}
+            </button>
+
+            {/* Animated panel (no libs) */}
+            <div
+              id={panelId}
+              className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
+                isExpanded ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0 mt-0"
+              }`}
+            >
+              <div className="overflow-hidden">
+                <p className="pl-2 whitespace-pre-line text-sm">{description}</p>
+              </div>
+            </div>
 
             <ScreenshotScroller screenshots={screenshots} title={title} />
 
@@ -78,7 +121,6 @@ function ProjectCards() {
         );
       })}
 
-      {/* Load more button */}
       {hasMore && (
         <div className="flex justify-center mt-8">
           <button
