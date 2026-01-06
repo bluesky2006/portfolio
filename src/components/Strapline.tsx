@@ -12,7 +12,7 @@ function Strapline() {
         </div>
       </h1>
       <div className="flex flex-col gap-3">
-        <h2 className="text-brand-main">Junior software developer</h2>
+        <h2 className="text-brand-main">Junior Software Developer</h2>
         <h3 className="italic text-gray-800 dark:text-gray-200">
           Building engaging, beautiful digital products
         </h3>
