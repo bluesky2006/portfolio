@@ -1,4 +1,43 @@
-export const projects = [
+import type { Screenshot } from "@/components/ScreenshotScroller";
+
+type Project = {
+  title: string;
+  date: string;
+  summary: string;
+  description: string;
+  stack?: string[];
+  link?: { label: string; url: string }[];
+  screenshots?: Screenshot[];
+  logo?: string;
+};
+
+export const projects: Project[] = [
+  {
+    title: "Tech Treatments",
+    date: "January 2026 - Ongoing",
+    summary:
+      "Local computer repair, upgrades and builds for non-technical people – with retro support and e-waste collection in Somerset",
+    description:
+      "Tech Treatments is my local, friendly computer services idea for non-technical people in and around Chantry, Somerset. It focuses on practical help with diagnosing issues, speeding up slow machines, upgrades, new PC builds and general setup and support.\n\nAlongside standard repairs, it also leans into retro computer services and responsible e-waste collection – aiming to keep useful tech in circulation and make it easier for people to get rid of old kit properly.\n\nThe website is planned as the home base for the business: a clear list of services, straightforward next steps for booking help, and a foundation for future content (including a possible YouTube channel) to build trust and show how the work is done.",
+    stack: ["Next.js", "TypeScript", "Tailwind"],
+    link: [
+      {
+        label: "GitHub",
+        url: "https://github.com/bluesky2006/tech-treatments",
+      },
+      {
+        label: "Live site",
+        url: "https://techtreatments.co.uk/",
+      },
+    ],
+    screenshots: [
+      { src: "/screens/techtreatments_1.png", orientation: "landscape" },
+      { src: "/screens/techtreatments_2.png", orientation: "landscape" },
+      { src: "/screens/techtreatments_3.png", orientation: "landscape" },
+      { src: "/screens/techtreatments_4.png", orientation: "landscape" },
+    ],
+    logo: "/logos/tt_logo.png",
+  },
   {
     title: "tiger knee",
     date: "October 2025",
@@ -15,10 +54,15 @@ export const projects = [
       },
       {
         label: "Live site",
-        url: "https://tigerknee.netlify.app/",
+        url: "https://tigerknee.co.uk/",
       },
     ],
-    screenshots: [],
+    screenshots: [
+      { src: "/screens/tigerknee_1.png", orientation: "landscape" },
+      { src: "/screens/tigerknee_2.png", orientation: "landscape" },
+      { src: "/screens/tigerknee_3.png", orientation: "landscape" },
+      { src: "/screens/tigerknee_4.png", orientation: "landscape" },
+    ],
     logo: "/logos/tigerknee.png",
   },
   {
@@ -38,7 +82,13 @@ export const projects = [
         url: "https://cur8or.vercel.app/",
       },
     ],
-    screenshots: [],
+    screenshots: [
+      { src: "/screens/cur8or_1.png", orientation: "landscape" },
+      { src: "/screens/cur8or_2.png", orientation: "landscape" },
+      { src: "/screens/cur8or_3.png", orientation: "landscape" },
+      { src: "/screens/cur8or_4.png", orientation: "landscape" },
+      { src: "/screens/cur8or_5.png", orientation: "landscape" },
+    ],
     logo: "/logos/cur8or.png",
   },
 
@@ -79,6 +129,11 @@ export const projects = [
       "glitterball is a website for a revived club night I co-run in Somerset, inspired by 80s/90s rave flyers and featurig bold type and grainy '90s stock photography.\n\nIt began as a ‘vibe-coding’ experiment using ChatGPT before I formally trained as a developer, and was part of what sparked my shift toward software development.",
     stack: ["HTML", "CSS", "JavaScript"],
     link: [{ label: "Live site", url: "https://glitterball.info" }],
+    screenshots: [
+      { src: "/screens/glitterball_1.png", orientation: "landscape" },
+      { src: "/screens/glitterball_2.png", orientation: "landscape" },
+      { src: "/screens/glitterball_3.png", orientation: "landscape" },
+    ],
   },
   {
     title: "Essentience",
@@ -94,11 +149,11 @@ export const projects = [
       },
     ],
     screenshots: [
-      "/screens/essentience_1.png",
-      "/screens/essentience_2.png",
-      "/screens/essentience_3.png",
-      "/screens/essentience_4.png",
-      "/screens/essentience_5.png",
+      { src: "/screens/essentience_1.png", orientation: "portrait" },
+      { src: "/screens/essentience_2.png", orientation: "portrait" },
+      { src: "/screens/essentience_3.png", orientation: "portrait" },
+      { src: "/screens/essentience_4.png", orientation: "portrait" },
+      { src: "/screens/essentience_5.png", orientation: "portrait" },
     ],
     logo: "/logos/essentience.png",
   },
@@ -148,7 +203,13 @@ export const projects = [
         url: "https://github.com/bluesky2006/nc-news-be",
       },
     ],
-    screenshots: [],
+    screenshots: [
+      { src: "/screens/northcoders_news_1.png", orientation: "landscape" },
+      { src: "/screens/northcoders_news_2.png", orientation: "landscape" },
+      { src: "/screens/northcoders_news_3.png", orientation: "landscape" },
+      { src: "/screens/northcoders_news_4.png", orientation: "landscape" },
+      { src: "/screens/northcoders_news_5.png", orientation: "landscape" },
+    ],
     logo: "",
   },
   {
@@ -164,7 +225,11 @@ export const projects = [
         url: "https://github.com/bluesky2006/dnd-api-explorer",
       },
     ],
-    screenshots: [],
+    screenshots: [
+      { src: "/screens/tomeofthreats_1.png", orientation: "landscape" },
+      { src: "/screens/tomeofthreats_2.png", orientation: "landscape" },
+      { src: "/screens/tomeofthreats_3.png", orientation: "landscape" },
+    ],
     logo: "",
   },
 ];

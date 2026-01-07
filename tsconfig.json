@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/data/projects.js",
+    "src/data/projects.ts",
     "src/data/experience.js",
     "src/types/**/*.d.ts"
   ],
