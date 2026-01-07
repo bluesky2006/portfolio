@@ -64,7 +64,7 @@ function ExperienceCards() {
                 onClick={() => toggleExpanded(index)}
                 aria-expanded={isExpanded}
                 aria-controls={panelId}
-                className="inline-flex items-center gap-2 text-xs underline underline-offset-4 transition hover:text-brand-main "
+                className="inline-flex items-center gap-2 text-xs underline underline-offset-4 transition hover:text-brand-main cursor-pointer"
               >
                 {isExpanded ? "- Less info" : "+ More info"}
               </button>

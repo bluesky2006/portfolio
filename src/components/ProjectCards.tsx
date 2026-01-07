@@ -79,7 +79,7 @@ function ProjectCards() {
               onClick={() => toggleExpanded(index)}
               aria-expanded={isExpanded}
               aria-controls={panelId}
-              className="inline-flex items-center gap-2 text-xs underline underline-offset-4 transition hover:text-brand-main focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-main/60 rounded"
+              className="inline-flex items-center gap-2 text-xs underline underline-offset-4 transition hover:text-brand-main cursor-pointer"
             >
               {isExpanded ? "- Less info" : "+ More info"}
             </button>
