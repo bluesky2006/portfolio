@@ -35,7 +35,7 @@ export default function ScreenshotScroller({ screenshots = [], title }: Screensh
     return () => el.removeEventListener("scroll", handleScroll);
   }, []);
 
-  if (!screenshots.length) return null;
+  const hasScreenshots = screenshots.length > 0;
 
   return (
     <>
@@ -45,39 +45,61 @@ export default function ScreenshotScroller({ screenshots = [], title }: Screensh
           className="overflow-x-auto rounded-xl w-full max-w-full min-w-0 [contain:inline-size]"
         >
           <ul className="flex flex-nowrap gap-3 snap-x snap-mandatory pr-8">
-            {screenshots.map((shot, i) => {
-              const isLandscape = shot.orientation === "landscape";
+            {hasScreenshots ? (
+              screenshots.map((shot, i) => {
+                const isLandscape = shot.orientation === "landscape";
 
-              return (
-                <li
-                  key={shot.src + i}
-                  className={
-                    "snap-start shrink-0 cursor-pointer " +
-                    (isLandscape ? "w-80 md:w-96" : "w-36 md:w-44")
-                  }
-                  onClick={() => setActiveImage(shot.src)}
-                >
-                  <div
+                return (
+                  <li
+                    key={shot.src + i}
                     className={
-                      "relative w-full overflow-hidden rounded-xl border border-gray-200 " +
-                      (isLandscape ? "aspect-[16/9]" : "aspect-[1290/2796]")
+                      "snap-start shrink-0 cursor-pointer " +
+                      (isLandscape ? "w-80 md:w-96" : "w-36 md:w-44")
                     }
+                    onClick={() => setActiveImage(shot.src)}
                   >
-                    <Image
-                      src={shot.src}
-                      alt={`${title} screenshot ${i + 1}`}
-                      fill
-                      sizes={
-                        isLandscape
-                          ? "(max-width: 768px) 60vw, 520px"
-                          : "(max-width: 768px) 35vw, 300px"
+                    <div
+                      className={
+                        "relative w-full overflow-hidden rounded-xl border border-gray-200 " +
+                        (isLandscape ? "aspect-[16/9]" : "aspect-[1290/2796]")
                       }
-                      className="object-contain"
-                    />
+                    >
+                      <Image
+                        src={shot.src}
+                        alt={`${title} screenshot ${i + 1}`}
+                        fill
+                        sizes={
+                          isLandscape
+                            ? "(max-width: 768px) 60vw, 520px"
+                            : "(max-width: 768px) 35vw, 300px"
+                        }
+                        className="object-contain"
+                      />
+                    </div>
+                  </li>
+                );
+              })
+            ) : (
+              <li className="snap-start shrink-0 w-36 md:w-44">
+                <div className="relative w-full aspect-[1290/2796] overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
+                  {/* CSS “wireframe” pattern */}
+                  <div
+                    className="absolute inset-0 opacity-60"
+                    style={{
+                      backgroundImage:
+                        "repeating-linear-gradient(45deg, rgba(156,163,175,.15) 0 1px, transparent 1px 12px)",
+                    }}
+                  />
+
+                  {/* Label */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-xs md:text-xs text-gray-400">
+                      Screenshots coming soon
+                    </span>
                   </div>
-                </li>
-              );
-            })}
+                </div>
+              </li>
+            )}
           </ul>
         </div>
 
