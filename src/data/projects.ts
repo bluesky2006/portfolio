@@ -35,6 +35,8 @@ export const projects: Project[] = [
       { src: "/screens/techtreatments_2.png", orientation: "landscape" },
       { src: "/screens/techtreatments_3.png", orientation: "landscape" },
       { src: "/screens/techtreatments_4.png", orientation: "landscape" },
+      { src: "/screens/techtreatments_5.png", orientation: "landscape" },
+      { src: "/screens/techtreatments_6.png", orientation: "landscape" },
     ],
     logo: "/logos/tt_logo.png",
   },
