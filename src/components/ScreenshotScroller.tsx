@@ -18,7 +18,9 @@ export default function ScreenshotScroller({ screenshots = [], title }: Screensh
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
-  const [activeImage, setActiveImage] = useState<string | null>(null);
+
+  // Use an index so the lightbox can navigate
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -56,7 +58,7 @@ export default function ScreenshotScroller({ screenshots = [], title }: Screensh
                       "snap-start shrink-0 cursor-pointer " +
                       (isLandscape ? "w-80 md:w-96" : "w-36 md:w-44")
                     }
-                    onClick={() => setActiveImage(shot.src)}
+                    onClick={() => setActiveIndex(i)}
                   >
                     <div
                       className={
@@ -82,7 +84,6 @@ export default function ScreenshotScroller({ screenshots = [], title }: Screensh
             ) : (
               <li className="snap-start shrink-0 w-36 md:w-44">
                 <div className="relative w-full aspect-[1290/2796] overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
-                  {/* CSS “wireframe” pattern */}
                   <div
                     className="absolute inset-0 opacity-60"
                     style={{
@@ -90,8 +91,6 @@ export default function ScreenshotScroller({ screenshots = [], title }: Screensh
                         "repeating-linear-gradient(45deg, rgba(156,163,175,.15) 0 1px, transparent 1px 12px)",
                     }}
                   />
-
-                  {/* Label */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-xs md:text-xs text-gray-400">
                       Screenshots coming soon
@@ -103,14 +102,12 @@ export default function ScreenshotScroller({ screenshots = [], title }: Screensh
           </ul>
         </div>
 
-        {/* Show right arrow when you can scroll right */}
         {!atEnd && (
           <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 p-2">
             <span className="text-gray-700 text-2xl">›</span>
           </div>
         )}
 
-        {/* Show left arrow when you can scroll left */}
         {!atStart && (
           <div className="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 p-2">
             <span className="text-gray-700 text-2xl">‹</span>
@@ -118,11 +115,13 @@ export default function ScreenshotScroller({ screenshots = [], title }: Screensh
         )}
       </div>
 
-      {activeImage && (
+      {activeIndex !== null && hasScreenshots && (
         <Lightbox
-          src={activeImage}
-          alt="Expanded screenshot"
-          onClose={() => setActiveImage(null)}
+          screenshots={screenshots}
+          index={activeIndex}
+          title={title}
+          onClose={() => setActiveIndex(null)}
+          onIndexChange={setActiveIndex}
         />
       )}
     </>
