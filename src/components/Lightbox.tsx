@@ -1,9 +1,45 @@
 "use client";
 
-import { useEffect, useCallback, useMemo } from "react";
+import { useEffect, useCallback, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { createPortal } from "react-dom";
 import type { Screenshot } from "./ScreenshotScroller";
+
+type Rect = { left: number; top: number; width: number; height: number };
+
+function getShotAspect(shot: Screenshot) {
+  // Known dimensions:
+  // - landscape: 1920×1080 (16/9)
+  // - portrait: 1290×2796
+  return shot.orientation === "portrait" ? 1290 / 2796 : 16 / 9;
+}
+
+function containRect(frameW: number, frameH: number, contentAspect: number): Rect {
+  // contentAspect = width/height
+  const frameAspect = frameW / frameH;
+
+  if (frameAspect >= contentAspect) {
+    // Fit by height
+    const height = frameH;
+    const width = height * contentAspect;
+    return {
+      left: (frameW - width) / 2,
+      top: 0,
+      width,
+      height,
+    };
+  }
+
+  // Fit by width
+  const width = frameW;
+  const height = width / contentAspect;
+  return {
+    left: 0,
+    top: (frameH - height) / 2,
+    width,
+    height,
+  };
+}
 
 export default function Lightbox({
   screenshots,
@@ -34,6 +70,30 @@ export default function Lightbox({
   }, [canGoNext, index, total, onIndexChange]);
 
   const shot = useMemo(() => screenshots[index], [screenshots, index]);
+
+  const frameRef = useRef<HTMLDivElement | null>(null);
+  const [imgRect, setImgRect] = useState<Rect | null>(null);
+
+  const computeImgRect = useCallback(() => {
+    const frame = frameRef.current;
+    if (!frame) return;
+
+    const { width: fw, height: fh } = frame.getBoundingClientRect();
+    if (fw <= 0 || fh <= 0) return;
+
+    const aspect = getShotAspect(shot);
+    setImgRect(containRect(fw, fh, aspect));
+  }, [shot]);
+
+  useEffect(() => {
+    computeImgRect();
+    const frame = frameRef.current;
+    if (!frame) return;
+
+    const ro = new ResizeObserver(() => computeImgRect());
+    ro.observe(frame);
+    return () => ro.disconnect();
+  }, [computeImgRect]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -71,6 +131,7 @@ export default function Lightbox({
       onClick={onClose}
     >
       <div
+        ref={frameRef}
         className="relative w-[92vw] h-[92vh] max-w-[1100px] max-h-[92vh] rounded-xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
@@ -83,27 +144,47 @@ export default function Lightbox({
           priority
         />
 
-        {/* Prev / Next arrows */}
-        {total > 1 && (
-          <>
+        {/* Prev / Next arrows (snapped to the contained image edges) */}
+        {total > 1 && imgRect && (
+          <div
+            className="absolute"
+            style={{
+              left: imgRect.left,
+              top: imgRect.top,
+              width: imgRect.width,
+              height: imgRect.height,
+            }}
+          >
+            {/* LEFT gradient zone */}
+            <div className="absolute inset-y-0 left-0 w-18 pointer-events-none">
+              <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
+            </div>
+
+            {/* RIGHT gradient zone */}
+            <div className="absolute inset-y-0 right-0 w-18 pointer-events-none">
+              <div className="absolute inset-0 bg-gradient-to-l from-black/55 via-black/20 to-transparent" />
+            </div>
+
+            {/* LEFT arrow button */}
             <button
               type="button"
               onClick={goPrev}
               aria-label="Previous screenshot"
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-3xl leading-none text-brand-white hover:text-brand-main"
+              className="absolute inset-y-0 left-0 w-18 flex items-center justify-center text-4xl leading-none text-brand-white hover:text-brand-main focus:outline-none"
             >
               ‹
             </button>
 
+            {/* RIGHT arrow button */}
             <button
               type="button"
               onClick={goNext}
               aria-label="Next screenshot"
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-3xl leading-none text-brand-white hover:text-brand-main"
+              className="absolute inset-y-0 right-0 w-18 flex items-center justify-center text-4xl leading-none text-brand-white hover:text-brand-main focus:outline-none"
             >
               ›
             </button>
-          </>
+          </div>
         )}
 
         {/* Close */}
